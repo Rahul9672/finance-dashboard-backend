@@ -76,7 +76,7 @@ http://localhost:3000
 
 👤 1. Create User
 
-OST /users
+POST /users
 
 Request:
 {
@@ -94,7 +94,7 @@ Response:
 
 🔐 Header (IMPORTANT)
 Use this in all protected routes:
-user-id: <copied-user-id>
+user-id: f0eab447-8840-4d5f-b83a-7a23b580c028
 
 
 💰 2. Create Record
@@ -102,7 +102,7 @@ user-id: <copied-user-id>
 POST /records
 
 Headers:
-user-id: <user_id>
+user-id: f0eab447-8840-4d5f-b83a-7a23b580c028
 
 Request:
 {
