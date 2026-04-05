@@ -157,3 +157,91 @@ Code            Meaning
 
 This project demonstrates backend architecture, API design, RBAC implementation, and financial data processing in a clean and scalable manner.
 :::
+
+
+
+
+
+## 🎨 System Flowchart (Figma)
+
+To better understand the backend architecture and data flow, a detailed system flowchart has been designed in Figma.
+
+🔗 Figma Design Link:
+https://www.figma.com/design/qdEUmCdzxxueSno1fPLTdt/Finance-Data-Processing---Access-Control-Backend-Flowchart
+
+---
+
+## 🔄 System Working (Flow Explanation)
+
+The backend system follows a structured flow to ensure secure and efficient data processing:
+
+### 1. Request Handling
+- Client sends API request
+- Request is routed through Express routes
+
+### 2. Authentication
+- Auth middleware checks for `user-id` in headers
+- Validates if the user exists in the system
+
+### 3. Authorization (RBAC)
+- Role-Based Access Control middleware verifies permissions
+- Ensures only authorized roles can access specific endpoints
+
+### 4. Business Logic Execution
+- Controller receives the request
+- Service layer processes business logic
+- Data is validated and processed accordingly
+
+### 5. Data Storage
+- Processed data is stored in the in-memory store
+- Acts as a temporary database
+
+### 6. Response Generation
+- Final response is sent back to the client
+- Includes success or error status
+
+---
+
+## 🧩 Flow Modules Covered
+
+The flowchart includes the following system modules:
+
+- Master System Flow (Request → Response lifecycle)
+- User Management Flow
+- Financial Record Flow
+- Dashboard Summary Flow
+- Access Control (RBAC Flow)
+
+This provides a complete visualization of how the system operates internally.
+
+
+
+
+
+## 🎨 System Architecture Flowchart
+
+![Finance Backend Flowchart](./assets/flowchart.png)
+
+🔗 Figma Design:
+https://www.figma.com/design/qdEUmCdzxxueSno1fPLTdt/Finance-Data-Processing---Access-Control-Backend-Flowchart
+
+---
+
+## 🔄 System Flow Explanation
+
+The backend system follows a structured layered architecture:
+
+### 🧩 Master Flow
+Client → Route → Auth → RBAC → Controller → Service → Store → Response
+
+### 👤 User Management Flow
+Handles user creation, validation, and storage using UUID-based identification.
+
+### 💰 Financial Record Flow
+Ensures only authorized users (Admin) can create financial records with proper validation.
+
+### 📊 Dashboard Flow
+Aggregates financial data to calculate total income, expenses, and net balance.
+
+### 🔐 RBAC Flow
+Validates user identity and role permissions before allowing access to protected APIs.
